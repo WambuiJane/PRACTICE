@@ -1,23 +1,23 @@
 <!DOCTYPE HTML>
 <html><head>
     <style>
-    body{margin:0px; padding:opx;}
+        body{margin:0px; padding:0px;}
     </style>
-    </head><body>
-        <canvas id="myCanvas" width="800" height="800"></canvas>
-        <script>
-            var canvas=document.getElementById('myCanvas');
-            var context=canvas.getContext('2d');
-            var imageObj = new Image();
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script>
+        var canvas=document.getElementById('myCanvas');
+        var context=canvas.getContext('2d');
+        var imageObj = new Image();
+        context.font = "bold 24px Arial";
+        context.fillText("12", canvas.width/2 - -110, 30);
+        context.fillText("3", canvas.width - 100, canvas.height/2 + -238);
+        context.fillText("6", canvas.width/2 - -115, canvas.height - 510);
+        context.fillText("9", 350, canvas.height/2 + -230);
+        context.fillText("00 : 00 : 00", canvas.width/2 - -80,150);
            
-            context.font = "bold 24px Arial";
-            context.fillText("12", canvas.width/2 - -110, 30);
-            context.fillText("3", canvas.width - 100, canvas.height/2 + -238);
-            context.fillText("6", canvas.width/2 - -115, canvas.height - 510);
-            context.fillText("9", 350, canvas.height/2 + -230);
-            context.fillText("00 : 00 : 00", canvas.width/2 - -80,150);
-           
-            imageObj.onload = function() {
+        imageObj.onload = function() {
             var pat1 = context.createPattern(imageObj,"repeat");
             context.beginPath();
             context.moveTo(10,50);
@@ -28,8 +28,9 @@
             context.lineWidth=20;
             context.strokeStyle= pat1;
             context.stroke();
-            }
+        }
             imageObj.src = 'image2.jpg';
-            </script>
-        </body></html>
+    </script>
+</body>
+</html>
     
